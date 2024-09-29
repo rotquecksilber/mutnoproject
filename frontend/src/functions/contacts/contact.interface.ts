@@ -6,11 +6,10 @@ export interface CreateContact{
 }
 
 export interface Contact {
-  _id: string;
+  id: string;
   name: string;
   email: string;
   tg: string;
   comment: string;
   note?: string;
-  __v: number;
 }

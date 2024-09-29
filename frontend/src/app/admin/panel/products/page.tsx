@@ -27,7 +27,7 @@ function AdminProducts() {
         <div className={cn(styles.product_container)}>
           {products
             .map((product) => (
-              <div key={product._id} className={styles.product}>
+              <div key={product.id} className={styles.product}>
                 <AdminProductCard product={product} />
               </div>
             ))}

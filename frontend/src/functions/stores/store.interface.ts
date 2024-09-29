@@ -1,10 +1,18 @@
 export interface Store {
-  _id: string;
+  id: string;
   name: string;
   description: string;
   link: string;
   isActive: boolean;
   createdAt: string;
   updatedAt: string;
-  __v: number;
+}
+
+export interface CreateStore {
+
+  name: string;
+  description: string;
+  link: string;
+  isActive: boolean;
+
 }

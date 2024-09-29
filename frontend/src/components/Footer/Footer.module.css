@@ -2,7 +2,7 @@
     background-color: var(--header-color);
     color: var(--link-color);
     text-align: center;
-
+margin-top: 10px;
     padding: 10px 0;
 }
 

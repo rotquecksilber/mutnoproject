@@ -13,6 +13,9 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { BcryptModule } from './bcrypt/bcrypt.module';
 import { ProductModule } from './products/product.module';
+import { StoresModule } from './stores/stores.module';
+import { NotificationModule } from './notification/notification.module';
+import { ContactsModule } from './contacts/contacts.module';
 
 @Module({
   imports: [
@@ -29,6 +32,9 @@ import { ProductModule } from './products/product.module';
     UsersModule,
     AuthModule,
     ProductModule,
+    StoresModule,
+    NotificationModule,
+    ContactsModule,
     ThrottlerModule.forRoot([
       {
         ttl: 60,

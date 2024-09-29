@@ -9,11 +9,12 @@ import { AdminHeader } from '@/components/AdminHeader/AdminHeader';
 import styles from '@/components/AdminUpdateProduct/AdminUpdateProduct.module.css';
 import cn from 'classnames';
 import { jura } from '@/fonts/fonts';
+import ProtectedRoute from "@/components/HOC/ProtectedRoute";
 
 // Интерфейс для данных, которые отправляются на сервер
 type CreateProductDto = Omit<Product, '_id' | 'createdAt' | 'updatedAt' | '__v'>;
 
-export default function CreateProduct() {
+function CreateProduct() {
   const router = useRouter();
 
   // Используем react-hook-form для управления формой
@@ -200,3 +201,5 @@ export default function CreateProduct() {
   )
   ;
 }
+
+export default ProtectedRoute(CreateProduct)

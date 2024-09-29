@@ -20,7 +20,7 @@ export default function Products() {
             products
               .filter((product) => product.isActive)
               .map((product) => (
-                <div key={product._id} className={styles.product}>
+                <div key={product.id} className={styles.product}>
                   <ProductCard product={product} />
                 </div>
               ))

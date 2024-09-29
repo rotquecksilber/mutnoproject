@@ -2,6 +2,8 @@ import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { User } from '../src/users/enities/user.entity';
 import { Product } from '../src/products/entities/product.entity';
+import { Store } from '../src/stores/entities/store.entity';
+import { Contact } from '../src/contacts/entities/contact.entity';
 
 /* Получение опций */
 export const getTypeOrmConfig = async (
@@ -20,6 +22,6 @@ const getTypeOrmOptions = (
   username: configService.get<string>('DB_USERNAME'),
   password: configService.get<string>('DB_PASSWORD'),
   database: configService.get<string>('DB_NAME'),
-  entities: [User, Product],
+  entities: [User, Product, Store, Contact],
   synchronize: configService.get<boolean>('DB_SYNCHRONIZE'),
 });

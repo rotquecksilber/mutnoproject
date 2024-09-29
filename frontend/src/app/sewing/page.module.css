@@ -1,0 +1,6 @@
+.developing {
+    margin-top: 50px;
+    font-size: clamp(1rem, 20px, 1.5rem);
+    text-align: center;
+    font-weight: 800;
+}

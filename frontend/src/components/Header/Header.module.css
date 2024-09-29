@@ -10,12 +10,14 @@
     align-items: center;
 }
 
+.header_stores,
 .header_menu {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 .header_menu__button {
-
     all: unset;
 }
 
@@ -40,4 +42,9 @@
     .header_menu {
         display: none;
     }
+
+    .header_link {
+        margin: 0;
+    }
+
 }

@@ -1,5 +1,5 @@
 export interface Product {
-  _id: string;
+  id: string;
   name: string;
   number: number;
   price: number;
@@ -15,7 +15,6 @@ export interface Product {
   picture: string[];
   createdAt: string;
   updatedAt: string;
-  __v: number;
 }
 
 export interface UpdateProduct {

@@ -109,7 +109,7 @@ export default function Buy() {
             <p>Загрузка...</p>
           ) : (
             stores.map((store, index) => (
-              <div key={store._id}>
+              <div key={store.id}>
                 <Link className={cn(styles.stores_link)} href={store.link} target="_blank" rel="noopener noreferrer">
                   <h3 className={cn(oswald.className, styles.stores_name)}>№{index + 1} {store.name}</h3>
                 </Link>
