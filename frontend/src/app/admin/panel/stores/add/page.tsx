@@ -6,6 +6,7 @@ import cn from 'classnames';
 import { jura } from '@/fonts/fonts';
 import addStore from '@/functions/stores/addStore.function';
 import { useRouter } from 'next/navigation';
+import ProtectedRoute from "@/components/HOC/ProtectedRoute";
 
 function AddStore() {
     const [name, setName] = useState('');
@@ -95,4 +96,4 @@ function AddStore() {
     );
 }
 
-export default AddStore;
+export default ProtectedRoute(AddStore);

@@ -1,6 +1,7 @@
 import Admin from '@/components/Admin/admin';
 
 import { Metadata } from 'next';
+import AuthRedirect from "@/components/HOC/Redirection";
 
 export const metadata: Metadata = {
   robots: {
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function AdminPage() {
-  return <Admin />;
+  return (
+      <>
+        <AuthRedirect />
+        <Admin />
+      </>
+  );
 }

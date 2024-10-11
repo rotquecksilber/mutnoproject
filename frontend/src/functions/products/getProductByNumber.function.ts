@@ -5,10 +5,10 @@ export const fetchProductByNumber = async (number: string): Promise<Product | nu
   try {
     const response = await axios.get<Product>(`${process.env.NEXT_PUBLIC_API_URL_LINUX}/product/${number}`, {
       headers: {
-        'Cache-Control': 'no-store',
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
         'Pragma': 'no-cache',
         'Expires': '0',
-      }
+      },
     });
     return response.data;
   } catch (error) {
@@ -16,6 +16,7 @@ export const fetchProductByNumber = async (number: string): Promise<Product | nu
     return null;
   }
 };
+
 
 export const fetchProductByNumberOld = async (number: string): Promise<Product | null> => {
   try {

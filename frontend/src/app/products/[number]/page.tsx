@@ -8,6 +8,8 @@ import CustomCarousel from '@/components/Swiper/Swiper';
 import { fetchProductByNumber } from '@/functions/products/getProductByNumber.function';
 import { Metadata } from 'next';
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   try {
     const res = await axios.get<Product[]>(`${process.env.NEXT_PUBLIC_API_URL_LINUX}/product`);
@@ -88,8 +90,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
     );
   } catch (error) {
     console.error('Ошибка при получении продукта:', error);
-    return (
-      <p>Ошибка при загрузке продукта. Пожалуйста, попробуйте позже.</p>
-    );
+    return notFound();
   }
 }

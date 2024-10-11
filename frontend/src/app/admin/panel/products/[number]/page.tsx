@@ -20,3 +20,5 @@ interface UpdateProductPageProps {
 export default function UpdateProductPage({ params }: UpdateProductPageProps) {
   return <UpdateProduct params={params} />;
 }
+
+

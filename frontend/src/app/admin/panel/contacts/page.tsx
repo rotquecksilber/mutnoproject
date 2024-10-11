@@ -6,6 +6,7 @@ import cn from 'classnames';
 import React from "react";
 import { Contact } from "@/functions/contacts/contact.interface";
 import getContacts from "@/functions/contacts/getContacts.function";
+import ProtectedRoute from "@/components/HOC/ProtectedRoute";
 
 function AdminContact() {
     const [contacts, setContacts] = useState<Contact[]>([]);
@@ -71,4 +72,4 @@ function AdminContact() {
     );
 }
 
-export default AdminContact;
+export default ProtectedRoute(AdminContact);

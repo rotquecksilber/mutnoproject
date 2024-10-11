@@ -12,12 +12,13 @@ import styles from './AdminUpdateProduct.module.css';
 import cn from 'classnames';
 import { jura } from '@/fonts/fonts';
 import { AdminHeader } from '@/components/AdminHeader/AdminHeader';
+import ProtectedRoute from "@/components/HOC/ProtectedRoute";
 
 interface UpdateProductProps {
   params: { number: string };
 }
 
-export default function UpdateProduct({ params }: UpdateProductProps) {
+ function UpdateProduct({ params }: UpdateProductProps) {
   const { number } = params;
   const [initialValues, setInitialValues] = useState<UpdateProduct | null>(null);
   const router = useRouter();
@@ -243,3 +244,5 @@ export default function UpdateProduct({ params }: UpdateProductProps) {
     </>
   );
 }
+
+export default ProtectedRoute(UpdateProduct)
